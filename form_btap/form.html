@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Your Information</title>
+        <style>
+        body {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        table {
+            background-color: #fcf4d9;
+            border: 1px solid #ffcc66;
+            width: 350px;
+            border-collapse: collapse;
+        }
+        th {
+            background-color: #ffda75;
+            color: #993300;
+            font-family: "Times New Roman", Times, serif;
+            font-style: italic;
+            font-size: 24px;
+            padding: 10px;
+        }
+        td {
+            padding: 8px 10px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"] {
+            width: 160px;
+            padding: 3px;
+            border: 1px solid #999;
+        }
+        input[readonly] {
+            background-color: #ffcccc; 
+            color: #b30000;/
+        }
+        .btn {
+            background-color: #e6e6e6;
+            border: 1px solid #999;
+            padding: 3px 15px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form name="info_form" action="config.php" method="POST">
+        <table>
+            <tr>
+                <th colspan="2">Enter Your Information</th>
+            </tr>
+            <tr><td>Fullname</td><td><input type="text" name="fullname" required></td></tr>
+            <tr><td>Address</td><td><input type="text" name="address"></td></tr>
+            <tr><td>Phone</td><td><input type="text" name="phone"></td></tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" value="Nam" checked> Nam
+                    <input type="radio" name="gender" value="Nữ"> Nữ
+                </td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td>
+                    <select name="country">
+                        <option value="Việt Nam">Việt Nam</option>
+                        <option value="Mỹ">Mỹ</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Study</td>
+                <td>
+                    <input type="checkbox" name="study[]" value="PHP & MySQL"> PHP & MySQL
+                    <input type="checkbox" name="study[]" value="ASP.NET"> ASP.NET
+                    <input type="checkbox" name="study[]" value="CCNA"> CCNA
+                    <input type="checkbox" name="study[]" value="Security+"> Security+
+                </td>
+            </tr>
+            <tr>
+                <td>Note</td>
+                <td><textarea name="note" rows="4" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Gửi">
+                    <input type="reset" value="Hủy">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
